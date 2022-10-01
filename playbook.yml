@@ -7,5 +7,12 @@
       become: yes
       apt: 
         name: ['apache2', 'php']
-        state: absent
+        state: present
         update_cache: yes
+        
+    - name: Iniciar o Servico apache2 no momento do boot
+      become: yes
+      systemd:
+        name: apache2
+        state: started
+        enabled: yes 
