@@ -6,6 +6,6 @@
     - name: Instalar Apache 2
       become: yes
       apt: 
-        name: apache2
+        name: ['apache2', 'php']
         state: absent
         update_cache: yes
