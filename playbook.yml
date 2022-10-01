@@ -2,3 +2,9 @@
   tasks:
     - name: Coleta o hostname
       command: hostname
+
+    - name: Instalar Apache 2
+      apt: 
+        name: apache2
+        state: absent
+        update_cache: yes
