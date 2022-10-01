@@ -16,3 +16,30 @@
         name: apache2
         state: started
         enabled: yes 
+        
+    - name: Iniciar o Servico apache2 no momento do boot
+      become: yes
+      systemd:
+        name: apache2
+        masked: no
+        state: started
+        enabled: yes
+
+ 
+    - name: Iniciar o Servico apache2 no momento do boot
+      become: yes
+      systemd:
+        name: apache2
+        masked: no
+        state: started
+        enabled: yes
+        
+    - name: Copiar o website para pasta do apache
+      become: yes
+      copy:
+       src: /home/ubuntu/modulo-ansible/Website_Copy
+       dest: /var/www/html/
+       owner: root
+       group: root
+       mode: '0644'
+
