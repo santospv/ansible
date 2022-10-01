@@ -1,0 +1,4 @@
+- hosts: webserver
+  tasks:
+    - name: Coleta o hostname
+      command: hostname
