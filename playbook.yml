@@ -21,7 +21,7 @@
     - name: Copiar o website para pasta do apache
       become: yes
       copy:
-       src: /home/ubuntu/modulo-ansible/Website_Copy
+       src: /home/ubuntu/modulo-ansible/site
        dest: /var/www/html/
        owner: root
        group: root

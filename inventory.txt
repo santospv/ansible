@@ -1,0 +1,7 @@
+#ips privados
+[webserver]
+10.0.101.253
+10.0.101.134
+
+[database]
+10.0.101.253
